@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title><%= title %></title>
+</head>
+
+<body>
+  <nav>
+    <p>Flight Tracker</p>
+    <a href="/flights" <%- title === 'Add Movie' ? 'class="active"' : '' %>>ALL FLIGHTS</a>
+    <a href="/flights/new" <%- title === 'All Movies' ? 'class="active"' : '' %>>ADD A FLIGHT</a>
+  </nav>
+  <main>
+    <h1><%= title %></h1>

@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica;
+  color: #424748;
+}
+
+a {
+  color: #00B7FF;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  text-align: center;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav > p{
+  margin-right: auto;
+}
+
+nav > a{
+  margin: 10px;
+  text-decoration: none;
+}
+
