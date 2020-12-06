@@ -6,5 +6,4 @@ router.get('/', flightCtrl.index)
 router.post('/', flightCtrl.create)
 router.get('/new', flightCtrl.newFlight)
 
-
 module.exports = router;

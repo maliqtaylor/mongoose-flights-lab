@@ -29,3 +29,13 @@ nav > a{
   text-decoration: none;
 }
 
+form{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form div{
+  margin: 15px;
+}

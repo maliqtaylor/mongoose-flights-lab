@@ -1,3 +1,8 @@
 <%- include('../partials/header') %>
-<%=flights%>
+<% flights.sort() %>
+<%flights.forEach((flight)=>{ %>
+
+<p><%= `${flight.airline} | ${flight.airport} | ${flight.flightNo} | ${flight.departure.toUTCString()}`  %></p>
+
+<% }) %>
 <%- include('../partials/footer') %>
