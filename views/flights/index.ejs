@@ -2,7 +2,13 @@
 <% flights.sort() %>
 <%flights.forEach((flight)=>{ %>
 
-<p><%= `${flight.airline} | ${flight.airport} | ${flight.flightNo} | ${flight.departure.toUTCString()}`  %></p>
+
+<p>
+  <%= `${flight.airline} | ${flight.airport} | ${flight.flightNo} | ${flight.departure.toUTCString()}`  %>
+  <a href="/flights/<%= flight._id %>">Details</a>
+</p>
+
+
 
 <% }) %>
 <%- include('../partials/footer') %>

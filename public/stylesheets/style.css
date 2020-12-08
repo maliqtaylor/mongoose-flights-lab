@@ -6,6 +6,7 @@
 
 a {
   color: #00B7FF;
+  text-decoration: none;
 }
 
 body {
@@ -26,7 +27,6 @@ nav > p{
 
 nav > a{
   margin: 10px;
-  text-decoration: none;
 }
 
 form{
