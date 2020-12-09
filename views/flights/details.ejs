@@ -1,5 +1,37 @@
 <%- include(('../partials/header'))  %>
-<h1>Poop</h1>
 
+<h3> <%= `${flight.airline} Airlines Flight ${flight.flightNo}`  %> </h3>
+
+<form id="new-ticket" method="POST" action="/flights/<%= flight._id %>/tickets">
+  <label>Seat Number:</label>
+  <input name="seat" required pattern="[A-F][1-9]\d?">
+
+  <label>Price:</label>
+  <input type="number" name="price">
+
+  <input type="submit" value="Add Ticket">
+
+</form>
+
+<% if (flight.tickets.length) { %>
+
+<h4>Tickets</h4>
+
+<% flight.tickets.forEach((t)=> { %>
+
+<div id="ticket-info">
+
+  <p class="seat-num">Seat : <%=t.seat%> | Price: <%= t.price? t.price : 250%> </p>
+
+</div>
+
+
+<% }); %>
+
+<% } else { %>
+
+<h5>No Tickets Yet</h5>
+
+<% } %>
 
 <%- include(('../partials/footer'))  %>

@@ -30,7 +30,7 @@ nav > a{
 }
 
 form{
-   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -38,4 +38,13 @@ form{
 
 form div{
   margin: 15px;
+}
+
+input{
+  margin: 10px;
+}
+
+#new-ticket{
+  display: flex;
+  flex-direction: row;
 }
