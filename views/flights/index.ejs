@@ -4,7 +4,7 @@
 
 
 <p>
-  <%= `${flight.airline} | ${flight.airport} | ${flight.flightNo} | ${flight.departure.toUTCString()}`  %>
+  <%= `${flight.airline} | ${flight.airport} | ${flight.flightNo} | ${flight.departure.toLocaleString()}`  %>
   <a href="/flights/<%= flight._id %>">Details</a>
 </p>
 
