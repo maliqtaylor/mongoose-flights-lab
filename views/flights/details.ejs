@@ -13,6 +13,15 @@
 
 </form>
 
+<form id="add-destination" action="/destinations/flight/<%= flight._id %>/" method="POST">
+  <select name="destinationId">
+    <%- destinations.map(d => 
+      `<option value="${d._id}">${d.airport}</option>`
+    ).join('') %>
+  </select>
+  <button type="submit">Add Destnation</button>
+</form>
+
 <% if (flight.tickets.length) { %>
 
 <h4>Tickets</h4>

@@ -1,4 +1,5 @@
 const Flight = require('../models/flight')
+const Destination = require('../models/destination')
 
 module.exports = {
   index,
@@ -32,11 +33,10 @@ function create(req, res) {
 
 function show(req, res) {
   Flight.findById(req.params.id)
-    .populate('cast')
-    .then((flight) => {
-      res.render('flights/details', { title: 'Flight Details', flight })
-    })
-    .catch((err) => {
-      console.log(err)
+    .populate('destinations').exec(function (err, flight) {
+      Destination.find({}, function (err, destinations) {
+        console.log(flight.destinations);
+        res.render('flights/details', { title: 'Flight Detail', flight, destinations })
+      })
     })
 }

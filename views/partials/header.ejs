@@ -12,8 +12,9 @@
 <body>
   <nav>
     <p>Flight Tracker</p>
-    <a href="/flights" <%- title === 'Add Movie' ? 'class="active"' : '' %>>ALL FLIGHTS</a>
-    <a href="/flights/new" <%- title === 'All Movies' ? 'class="active"' : '' %>>ADD A FLIGHT</a>
+    <a href="/flights" <%- title === 'Add Flight' ? 'class="active"' : '' %>>ALL FLIGHTS</a>
+    <a href="/flights/new" <%- title === 'All Flights' ? 'class="active"' : '' %>>ADD A FLIGHT</a>
+    <a href="/destinations/new" <%- title === 'Add Destination' ? 'class="active"' : '' %>>ADD A DESTINATION</a>
   </nav>
   <main>
     <h1><%= title %></h1>

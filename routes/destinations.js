@@ -6,4 +6,6 @@ const destinationsCtrl = require('../controllers/destinations')
 router.get('/new', destinationsCtrl.newDestination)
 router.post('/', destinationsCtrl.create)
 
+router.post('/flight/:id/', destinationsCtrl.addDestination)
+
 module.exports = router
